@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23dc2626'/><path d='M50 18 L50 82 M18 50 L82 50' stroke='%23fff' stroke-width='6' stroke-dasharray='10 8'/><text x='50' y='66' font-size='48' text-anchor='middle' fill='%23fff' font-family='serif' font-weight='bold'>田</text></svg>">
-<title>Y9 Band 3 Unit 2 選擇與溝通 · 中三中文</title>
+<title>Year 9 Chinese · Band 3 Unit 2 Word Bank &amp; Practice · 九年級第三組第二單元詞語練習</title>
 <style>
   :root{
     --ink:#1e293b; --ink2:#475569; --paper:#f4f7fb; --card:#ffffff;
@@ -312,7 +312,7 @@
   /* hero 吉祥物 */
   .hero-card{position:relative;border:3px solid #fbcfe8;background:linear-gradient(120deg,#fff5f7 0%,#fdf4ff 30%,#f0f9ff 65%,#fffbeb 100%)}
   .hero-flex{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-  .hero-flex h1{flex:1;min-width:280px}
+  .hero-flex h1{flex:1;min-width:280px;padding-right:245px;font-size:clamp(1.55rem,2.6vw,2.05rem)}
   .mascot{position:relative;flex:none;font-size:4.6rem;line-height:1;cursor:pointer;user-select:none;animation:wob 3.6s ease-in-out infinite}
   @keyframes wob{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg) translateY(-5px)}}
   .mascot .bubble{position:absolute;right:105%;top:-14px;width:215px;background:#fff;border:2px solid #fbcfe8;border-radius:16px;padding:10px 12px;font-size:.92rem;font-weight:800;color:#9d174d;box-shadow:0 8px 20px rgba(236,72,153,.18);animation:floaty 6s ease-in-out infinite}
@@ -339,6 +339,13 @@
   /* 積分飄字 */
   .pts-float{position:fixed;z-index:3000;pointer-events:none;background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff;font-weight:900;border-radius:999px;padding:6px 16px;font-size:1.05rem;box-shadow:0 6px 18px rgba(245,158,11,.5);transform:translate(-50%,-50%);animation:ptsUp 1.5s ease-out forwards;white-space:nowrap}
   @keyframes ptsUp{0%{opacity:0;transform:translate(-50%,-10%) scale(.5)}18%{opacity:1;transform:translate(-50%,-60%) scale(1.15)}100%{opacity:0;transform:translate(-50%,-300%) scale(1)}}
+  /* 🎉 答對慶祝 emoji 禮花 */
+  .cel-emoji{position:fixed;z-index:2900;pointer-events:none;animation:celFly .95s cubic-bezier(.2,.8,.4,1) forwards;transform:translate(-50%,-50%);text-shadow:0 2px 5px rgba(0,0,0,.18)}
+  @keyframes celFly{0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(0deg)}18%{opacity:1;transform:translate(-50%,-95%) scale(1.3) rotate(-10deg)}100%{opacity:0;transform:translate(calc(-50% + var(--dx,0px)),calc(-50% + var(--dy,-70px))) scale(.85) rotate(25deg)}}
+  /* 慶祝音效開關 */
+  #sndToggle{border:2px solid #fbbf24;cursor:pointer;font-family:inherit;font-size:1.1rem;line-height:1;background:#fff;border-radius:999px;padding:6px 8px;box-shadow:0 3px 8px rgba(245,158,11,.25);transition:transform .15s,filter .15s}
+  #sndToggle:hover{transform:scale(1.12)}
+  #sndToggle.off{filter:grayscale(1);opacity:.55}
   /* 彩帶 & 提示 */
   #confetti{position:fixed;inset:0;z-index:2500;pointer-events:none}
   #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(140px);z-index:3000;background:#fff;border:3px solid #fbbf24;border-radius:999px;padding:10px 26px;font-size:1.05rem;font-weight:900;color:#92400e;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .45s cubic-bezier(.2,1.5,.4,1);white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
@@ -373,7 +380,7 @@
   .pts-close{position:absolute;top:10px;right:14px;border:none;background:none;font-size:1.4rem;cursor:pointer;color:#94a3b8;font-family:inherit}
   .pts-reset{display:block;margin:8px auto 0;border:2px dashed #fca5a5;background:#fff;color:#b91c1c;border-radius:999px;padding:6px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit}
   .pts-reset:hover{background:#fef2f2}
-  @media (max-width:640px){ .mascot .bubble{width:160px;right:100%;font-size:.8rem} }
+  @media (max-width:640px){ .mascot .bubble{width:160px;right:100%;font-size:.8rem} .hero-flex h1{padding-right:0} }
   /* 繁/簡切換 script switch */
   .script-switch{display:flex;background:#fff;border:2px solid #fbbf24;border-radius:999px;overflow:hidden;box-shadow:0 3px 8px rgba(245,158,11,.25)}
   .script-switch .ss-btn{border:none;background:none;font-family:inherit;font-weight:900;font-size:1rem;padding:6px 13px;cursor:pointer;color:#b45309;transition:.15s;line-height:1.2}
@@ -385,7 +392,7 @@
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">📕 <span class="b1">Y9 Band 3 U2</span> · <span class="b2">選擇與溝通</span></div>
+    <div class="logo">📕 <span class="b1">Y9B3 U2</span> · <span class="b2">詞語練習</span></div>
     <div class="nav-links">
       <a href="#overview">總覽<small>Home</small></a>
       <a href="#read">拓展詞語<small>Words</small></a>
@@ -399,10 +406,11 @@
       <button class="ss-btn" data-s="t">繁</button>
       <button class="ss-btn" data-s="s">簡</button>
     </div>
+    <button id="sndToggle" title="慶祝音效 Celebration sounds">🔔</button>
     <button id="ptsPill" title="我的積分植物 🌱 點擊看成績單 Click for my plant report">
       <span class="plant" id="ptsPlant">🌰</span>
       <span class="pip"><span class="fill" id="ptsFill" style="width:0%"></span></span>
-      <span class="score"><b id="ptsTotal">0</b><small>/80</small></span>
+      <span class="score"><b id="ptsTotal">0</b><small>/150</small></span>
     </button>
   </div>
 </nav>
@@ -410,7 +418,7 @@
 <header class="hero" id="overview">
   <div class="hero-card">
     <div class="hero-flex">
-      <h1>Y9 Band 3 Unit 2 選擇與溝通<small>Year 9 Chinese · Band 3 Unit 2 Word Bank &amp; Practice · 中三中文 第三組 第二單元 ·《給媽媽的一封信》《日記一篇》《抉擇》《給表哥的電子郵件》</small></h1>
+      <h1>Year 9 Chinese · Band 3 Unit 2 Word Bank &amp; Practice<small>九年級第三組第二單元詞語練習 · 《給媽媽的一封信》《日記一篇》《抉擇》《給表哥的電子郵件》</small></h1>
       <div class="mascot" id="mascot" title="點我一下 Tap me!">🐼<div class="bubble">做練習、寫生字，一起賺積分吧！<span class="en-gloss">Practise &amp; write to earn points!</span></div></div>
     </div>
     <div class="lesson-cards" id="lessonCards"></div>
@@ -522,7 +530,7 @@
   </section>
 </main>
 
-<footer>Y9 Band 3 Unit 2 選擇與溝通 · Year 9 Chinese · Word Bank &amp; Practice ·《給媽媽的一封信》《日記一篇》《抉擇》《給表哥的電子郵件》· 筆畫動畫 Strokes by Hanzi Writer</footer>
+<footer>Year 9 Chinese · Band 3 Unit 2 Word Bank &amp; Practice · 九年級第三組第二單元詞語練習 ·《給媽媽的一封信》《日記一篇》《抉擇》《給表哥的電子郵件》· 筆畫動畫 Strokes by Hanzi Writer</footer>
 
 <!-- fullscreen stroke overlay -->
 <!-- 🃏 詞卡全屏 flashcards fullscreen -->
@@ -598,7 +606,7 @@
     <button class="pts-close" id="ptsClose">✕</button>
     <h3>🌱 我的植物積分 <small>My Plant Points</small></h3>
     <div class="pts-garden" id="pmGarden">
-      <div class="pts-total"><span id="pmTotal">0</span><small>/ 80 分 · 滿開 Full Bloom</small></div>
+      <div class="pts-total"><span id="pmTotal">0</span><small>/ 150 分 · 開花 Full Bloom</small></div>
       <div class="pts-lv" id="pmLv"></div>
       <div class="pts-stages" id="pmStages"></div>
       <div class="pts-bar"><div id="pmBar"></div></div>
@@ -609,7 +617,7 @@
       <div class="pts-cell"><div class="n" id="pmWrite">0</div><div class="l">✍️ 寫字 Writing</div></div>
       <div class="pts-cell"><div class="n" id="pmCards">0</div><div class="l">🃏 詞卡 Cards</div></div>
     </div>
-    <p style="font-size:.78rem;color:#94a3b8;text-align:center;margin:8px 0 2px">答對填空 +5 · 選擇題 +10 · <b>手動確認寫對 +1（每字僅 1 次）</b> · 詞卡認識 +1<br>Fill blank +5 · Choice +10 · <b>Manual "I wrote it right" +1 (once per character)</b> · Flashcard +1<br>💡 看筆畫動畫 <b>不計分</b> · 累計滿 80 分達到 🌸 滿開 Full Bloom</p>
+    <p style="font-size:.78rem;color:#94a3b8;text-align:center;margin:8px 0 2px"><b>所有題目答對 +1 · 手動確認寫對 +1（每字僅 1 次） · 詞卡認識 +1</b><br><b>All correct answers +1 · Manual "I wrote it right" +1 (once per character) · Flashcard "Got it" +1</b><br>💡 看筆畫動畫 <b>不計分</b> · 累計滿 150 分達到 🌼 開花 Full Bloom</p>
     <button class="pts-reset" id="ptsReset">♻️ 重置積分 Reset points</button>
   </div>
 </div>
@@ -646,7 +654,7 @@ const LESSONS = [
 /* ==================== 繁/簡切換 Traditional/Simplified Switch ==================== */
 const SIM = (()=>{ try{ return localStorage.getItem("y9u3_script")==="s"; }catch(e){ return false; } })();
 /* ==== 繁→簡映射（由 OpenCC 離線生成） ==== */
-const T2S_CHARS = {"來": "来", "係": "系", "個": "个", "們": "们", "備": "备", "傳": "传", "僅": "仅", "優": "优", "兒": "儿", "內": "内", "兩": "两", "冊": "册", "別": "别", "創": "创", "劃": "划", "動": "动", "勵": "励", "厲": "厉", "參": "参", "問": "问", "單": "单", "嗎": "吗", "嚮": "向", "堅": "坚", "夠": "够", "夢": "梦", "媽": "妈", "學": "学", "實": "实", "寫": "写", "對": "对", "師": "师", "帶": "带", "庫": "库", "張": "张", "彈": "弹", "後": "后", "從": "从", "徹": "彻", "惱": "恼", "慮": "虑", "憑": "凭", "應": "应", "戲": "戏", "戶": "户", "換": "换", "擇": "择", "擊": "击", "擔": "担", "擬": "拟", "數": "数", "於": "于", "時": "时", "暢": "畅", "會": "会", "東": "东", "業": "业", "極": "极", "標": "标", "樣": "样", "機": "机", "橫": "横", "檢": "检", "歡": "欢", "氣": "气", "決": "决", "沒": "没", "況": "况", "減": "减", "測": "测", "湊": "凑", "準": "准", "溝": "沟", "溫": "温", "滿": "满", "漸": "渐", "潑": "泼", "為": "为", "無": "无", "煩": "烦", "狀": "状", "猶": "犹", "獎": "奖", "現": "现", "畫": "画", "發": "发", "眾": "众", "確": "确", "禮": "礼", "種": "种", "稱": "称", "積": "积", "筆": "笔", "範": "范", "簡": "简", "籃": "篮", "籌": "筹", "級": "级", "終": "终", "組": "组", "給": "给", "統": "统", "經": "经", "維": "维", "網": "网", "線": "线", "練": "练", "總": "总", "績": "绩", "繫": "系", "繼": "继", "續": "续", "義": "义", "習": "习", "聯": "联", "職": "职", "聽": "听", "膠": "胶", "臨": "临", "臺": "台", "與": "与", "興": "兴", "舉": "举", "處": "处", "虛": "虚", "號": "号", "術": "术", "衝": "冲", "裏": "里", "裝": "装", "見": "见", "規": "规", "視": "视", "覺": "觉", "覽": "览", "觀": "观", "計": "计", "討": "讨", "記": "记", "訪": "访", "評": "评", "詞": "词", "試": "试", "話": "话", "該": "该", "認": "认", "語": "语", "誠": "诚", "誤": "误", "說": "说", "説": "说", "誰": "谁", "課": "课", "談": "谈", "諒": "谅", "論": "论", "諧": "谐", "諱": "讳", "講": "讲", "識": "识", "議": "议", "讀": "读", "變": "变", "讓": "让", "責": "责", "費": "费", "賺": "赚", "購": "购", "車": "车", "較": "较", "輕": "轻", "轉": "转", "辦": "办", "辭": "辞", "這": "这", "進": "进", "遊": "游", "運": "运", "過": "过", "達": "达", "遠": "远", "適": "适", "選": "选", "還": "还", "邊": "边", "郵": "邮", "鈕": "钮", "銀": "银", "錢": "钱", "錯": "错", "長": "长", "閉": "闭", "開": "开", "間": "间", "關": "关", "際": "际", "隨": "随", "險": "险", "難": "难", "電": "电", "靈": "灵", "靜": "静", "響": "响", "頁": "页", "順": "顺", "須": "须", "領": "领", "題": "题", "顧": "顾", "顯": "显", "風": "风", "飄": "飘", "飾": "饰", "館": "馆", "馬": "马", "騙": "骗", "驗": "验", "體": "体", "鬆": "松", "麼": "么", "點": "点"};
+const T2S_CHARS = {"綻": "绽", "來": "来", "係": "系", "個": "个", "們": "们", "備": "备", "傳": "传", "僅": "仅", "優": "优", "兒": "儿", "內": "内", "兩": "两", "冊": "册", "別": "别", "創": "创", "劃": "划", "動": "动", "勵": "励", "厲": "厉", "參": "参", "問": "问", "單": "单", "嗎": "吗", "嚮": "向", "堅": "坚", "夠": "够", "夢": "梦", "媽": "妈", "學": "学", "實": "实", "寫": "写", "對": "对", "師": "师", "帶": "带", "庫": "库", "張": "张", "彈": "弹", "後": "后", "從": "从", "徹": "彻", "惱": "恼", "慮": "虑", "憑": "凭", "應": "应", "戲": "戏", "戶": "户", "換": "换", "擇": "择", "擊": "击", "擔": "担", "擬": "拟", "數": "数", "於": "于", "時": "时", "暢": "畅", "會": "会", "東": "东", "業": "业", "極": "极", "標": "标", "樣": "样", "機": "机", "橫": "横", "檢": "检", "歡": "欢", "氣": "气", "決": "决", "沒": "没", "況": "况", "減": "减", "測": "测", "湊": "凑", "準": "准", "溝": "沟", "溫": "温", "滿": "满", "漸": "渐", "潑": "泼", "為": "为", "無": "无", "煩": "烦", "狀": "状", "猶": "犹", "獎": "奖", "現": "现", "畫": "画", "發": "发", "眾": "众", "確": "确", "禮": "礼", "種": "种", "稱": "称", "積": "积", "筆": "笔", "範": "范", "簡": "简", "籃": "篮", "籌": "筹", "級": "级", "終": "终", "組": "组", "給": "给", "統": "统", "經": "经", "維": "维", "網": "网", "線": "线", "練": "练", "總": "总", "績": "绩", "繫": "系", "繼": "继", "續": "续", "義": "义", "習": "习", "聯": "联", "職": "职", "聽": "听", "膠": "胶", "臨": "临", "臺": "台", "與": "与", "興": "兴", "舉": "举", "處": "处", "虛": "虚", "號": "号", "術": "术", "衝": "冲", "裏": "里", "裝": "装", "見": "见", "規": "规", "視": "视", "覺": "觉", "覽": "览", "觀": "观", "計": "计", "討": "讨", "記": "记", "訪": "访", "評": "评", "詞": "词", "試": "试", "話": "话", "該": "该", "認": "认", "語": "语", "誠": "诚", "誤": "误", "說": "说", "説": "说", "誰": "谁", "課": "课", "談": "谈", "諒": "谅", "論": "论", "諧": "谐", "諱": "讳", "講": "讲", "識": "识", "議": "议", "讀": "读", "變": "变", "讓": "让", "責": "责", "費": "费", "賺": "赚", "購": "购", "車": "车", "較": "较", "輕": "轻", "轉": "转", "辦": "办", "辭": "辞", "這": "这", "進": "进", "遊": "游", "運": "运", "過": "过", "達": "达", "遠": "远", "適": "适", "選": "选", "還": "还", "邊": "边", "郵": "邮", "鈕": "钮", "銀": "银", "錢": "钱", "錯": "错", "長": "长", "閉": "闭", "開": "开", "間": "间", "關": "关", "際": "际", "隨": "随", "險": "险", "難": "难", "電": "电", "靈": "灵", "靜": "静", "響": "响", "頁": "页", "順": "顺", "須": "须", "領": "领", "題": "题", "顧": "顾", "顯": "显", "風": "风", "飄": "飘", "飾": "饰", "館": "馆", "馬": "马", "騙": "骗", "驗": "验", "體": "体", "鬆": "松", "麼": "么", "點": "点"};
 const T2S_PHRASES = {};
 const WORD_S2T = {"一筹莫展": "一籌莫展", "不凑巧": "不湊巧", "人生规划": "人生規劃", "人际关系": "人際關係", "传统": "傳統", "先公而后私": "先公而後私", "两全其美": "兩全其美", "两难困境": "兩難困境", "冷静": "冷靜", "升学": "升學", "只练未认识": "只練未認識", "和谐": "和諧", "向往": "嚮往", "梦寐以求": "夢寐以求", "左右为难": "左右為難", "后悔": "後悔", "忌讳": "忌諱", "思维方式": "思維方式", "抉择": "抉擇", "担心": "擔心", "畅所欲言": "暢所欲言", "最优": "最優", "模棱两可": "模棱兩可", "深思熟虑": "深思熟慮", "沟通": "溝通", "温习": "溫習", "为了": "為了", "无所适从": "無所適從", "无礼": "無禮", "烦恼": "煩惱", "现实": "現實", "由于": "由於", "疏远": "疏遠", "真实": "真實", "笔": "筆", "聆听": "聆聽", "联系": "聯繫", "自从": "自從", "自责": "自責", "兴致勃勃": "興致勃勃", "举棋不定": "舉棋不定", "虚拟": "虛擬", "行行出状元": "行行出狀元", "冲动": "衝動", "冲突": "衝突", "被动": "被動", "解决": "解決", "访问": "訪問", "认识了": "認識了", "越来越": "越來越", "足够": "足夠", "运用": "運用", "达到": "達到", "选择": "選擇", "重置进度": "重置進度", "开明": "開明", "灵活": "靈活", "面对": "面對", "面临": "面臨", "骗": "騙"};
 function zhL(s){
@@ -671,7 +679,7 @@ LESSONS.forEach((L, li) => L.write.forEach((w, wi) => FLAT.push({ li, wi, word: 
 
 /* ==================== 🏅 積分系統 Points System ==================== */
 const PTS = { total:0, quiz:0, write:0, cards:0, log:{},
-  LEVELS:[[0,"種子","🌰"],[10,"發芽","🌱"],[20,"幼苗","🌿"],[35,"成長","🌳"],[50,"含苞","🌺"],[65,"開花","🌸"],[80,"滿開","🏆🌸"]] };
+  LEVELS:[[0,"種子","🌰"],[15,"發芽","🌱"],[35,"幼苗","🌿"],[60,"成長","🌳"],[90,"含苞","🌺"],[120,"綻放","🌸"],[150,"開花","🌼"]] };
 if(SIM) convInPlace(PTS.LEVELS);
 function ptsLoad(){ try{ const d=JSON.parse(localStorage.getItem("y9u3_points_v1")||"null");
   if(d){ PTS.total=d.total||0; PTS.quiz=d.quiz||0; PTS.write=d.write||0; PTS.cards=d.cards||0; PTS.log=d.log||{}; } }catch(e){} }
@@ -693,22 +701,22 @@ function ptsRender(bump){
   const idx=ptsLevelIdx(PTS.total), lv=PTS.LEVELS[idx], next=PTS.LEVELS[idx+1];
   const max = PTS.LEVELS[PTS.LEVELS.length-1][0];
   document.getElementById("ptsTotal").textContent = Math.min(PTS.total, max);
-  // 植物動畫：滿開時換成盛開動畫
+  // 植物動畫：開花時換成盛開動畫
   const plantEl = document.getElementById("ptsPlant");
   plantEl.textContent = lv[2];
   plantEl.classList.toggle("max", !next);
-  // 進度條：以總分 80 為基準（而不是下一階段），這樣到 10 分就顯示 12.5%、一直遞增到 80/80=100%
+  // 進度條：以總分 150 為基準（而不是下一階段），分數到哪就顯示到哪，150/150=100%
   const pct = Math.min(100, Math.round(PTS.total / max * 100));
   document.getElementById("ptsFill").style.width = pct + "%";
   if(bump){ const p=document.getElementById("ptsPill"); p.classList.remove("bump"); void p.offsetWidth; p.classList.add("bump"); }
   // modal
   document.getElementById("pmTotal").textContent = Math.min(PTS.total, max);
-  document.getElementById("pmLv").textContent = lv[2]+" "+lv[1]+(next?"":zhL(" · 已達滿開 Full bloom!"));
+  document.getElementById("pmLv").textContent = lv[2]+" "+lv[1]+(next?"":zhL(" · 已達開花 Full bloom!"));
   const bar=document.getElementById("pmBar"), nx=document.getElementById("pmNext");
   if(next){ const span=max-lv[0];
     bar.style.width=Math.min(100,Math.round(PTS.total/max*100))+"%";
-    nx.textContent=zhL("再賺")+" "+(max-PTS.total)+" "+zhL("分 → 滿開")+" · "+(max-PTS.total)+" pts to full bloom";
-  } else { bar.style.width="100%"; nx.textContent=zhL("🎉 已達滿開！花開富貴！Full bloom reached!"); }
+    nx.textContent=zhL("再賺")+" "+(max-PTS.total)+" "+zhL("分 → 開花")+" · "+(max-PTS.total)+" pts to full bloom";
+  } else { bar.style.width="100%"; nx.textContent=zhL("🎉 已達開花！花開富貴！Full bloom reached!"); }
   document.getElementById("pmQuiz").textContent=PTS.quiz;
   document.getElementById("pmWrite").textContent=PTS.write;
   document.getElementById("pmCards").textContent=PTS.cards;
@@ -728,12 +736,59 @@ function floatPts(n, el, label){
   document.body.appendChild(d);
   setTimeout(()=>d.remove(),1500);
 }
+/* ---- 🔔🎉 答對慶祝：叮嚀音效 + emoji 禮花 ---- */
+let CEL_ON = true;
+try{ CEL_ON = localStorage.getItem("y9u3_snd") !== "0"; }catch(e){}
+function celSound(){
+  if(!CEL_ON) return;
+  const now = performance.now();
+  if(celSound.t && now - celSound.t < 200) return; /* 一次檢查多題答對時只響一次 */
+  celSound.t = now;
+  try{
+    const ctx = celSound.ctx || (celSound.ctx = new (window.AudioContext||window.webkitAudioContext)());
+    if(ctx.state === "suspended") ctx.resume();
+    const t0 = ctx.currentTime;
+    /* 上行三音 C5 → E5 → G5 答對叮嚀 */
+    [[523.25,0],[659.25,.09],[783.99,.18]].forEach(p=>{
+      const o=ctx.createOscillator(), g=ctx.createGain();
+      o.type="sine"; o.frequency.value=p[0];
+      g.gain.setValueAtTime(0,t0+p[1]);
+      g.gain.linearRampToValueAtTime(.22,t0+p[1]+.02);
+      g.gain.exponentialRampToValueAtTime(.001,t0+p[1]+.38);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(t0+p[1]); o.stop(t0+p[1]+.45);
+    });
+  }catch(e){}
+}
+const CEL_EMOJI = ["🎉","⭐","🌟","✨","🌸","🌼","🎊","👏","💯","🏅"];
+function celPop(el){
+  celSound();
+  let x=innerWidth/2, y=innerHeight/2;
+  if(el && el.getBoundingClientRect){ const r=el.getBoundingClientRect(); if(r.width||r.height||r.top){ x=r.left+r.width/2; y=r.top+r.height/2; } }
+  const n=6;
+  for(let i=0;i<n;i++){
+    const d=document.createElement("div"); d.className="cel-emoji";
+    d.textContent=CEL_EMOJI[Math.floor(Math.random()*CEL_EMOJI.length)];
+    const ang=-Math.PI/2+(i-(n-1)/2)*.55, dist=52+Math.random()*42;
+    d.style.left=x+"px"; d.style.top=y+"px";
+    d.style.setProperty("--dx",(Math.cos(ang)*dist).toFixed(1)+"px");
+    d.style.setProperty("--dy",(Math.sin(ang)*dist).toFixed(1)+"px");
+    d.style.fontSize=(15+Math.random()*13)+"px";
+    document.body.appendChild(d);
+    setTimeout(()=>d.remove(),1000);
+  }
+}
+const sndBtn=document.getElementById("sndToggle");
+function sndRender(){ sndBtn.textContent=CEL_ON?"🔔":"🔇"; sndBtn.classList.toggle("off",!CEL_ON); sndBtn.title=zhL(CEL_ON?"慶祝音效：開（點擊關閉）":"慶祝音效：關（點擊開啟）")+" Sound "+(CEL_ON?"on":"off"); }
+sndBtn.onclick=()=>{ CEL_ON=!CEL_ON; try{ localStorage.setItem("y9u3_snd",CEL_ON?"1":"0"); }catch(e){} sndRender(); if(CEL_ON) celSound(); };
+sndRender();
 function addPoints(n, cat, el, label){
   if(!n) return;
   PTS.total+=n; PTS[cat]=(PTS[cat]||0)+n;
   const before=ptsLevelIdx(PTS.total-n), after=ptsLevelIdx(PTS.total);
   ptsSave(); ptsRender(true);
   floatPts(n, el, label);
+  celPop(el); /* 🎉 答對慶祝：音效 + emoji 禮花 */
   if(after>before){ const lv=PTS.LEVELS[after]; confettiBurst(130); toast("🌱 " + lv[2] + " 升級啦！「" + lv[1] + "」！Your plant grew to " + lv[1] + "! 🎉"); }
 }
 function awardPoints(n, cat, key, el, label){
@@ -768,7 +823,7 @@ document.getElementById("ptsReset").onclick = ()=>{ if(confirm(zhL("確定要把
 const MASCOT_MSGS=[
   "做練習、寫生字，一起賺積分吧！<span class='en-gloss'>Practise &amp; write to earn points!</span>",
   "答對練習題可得 5～10 分！<span class='en-gloss'>Correct answers earn 5–10 pts!</span>",
-  "筆畫小測驗全對可得 15 分！<span class='en-gloss'>Perfect stroke quiz = 15 pts!</span>",
+  "練習越多分越多，加油！<span class='en-gloss'>Practice makes points!</span>",
   "翻詞卡標記「認識了」可得 3 分！<span class='en-gloss'>Flashcards: 3 pts each!</span>",
   "加油，你一定可以的！💪<span class='en-gloss'>You can do it!</span>"];
 if(SIM) convInPlace(MASCOT_MSGS);
@@ -1006,7 +1061,7 @@ const FILL_BY_LESSON = {
     ["媽媽見我深夜還未回家，十分", "我的安全。", "擔心", "Seeing me still out late at night, Mum was very worried about my safety."],
     ["在", "世界中，人與人的交往變得真假難分。", "虛擬", "In the virtual world, relationships between people become hard to tell true from false."],
     ["他為人誠實，是一位", "的朋友。", "可靠", "He is honest — a reliable friend."],
-    ["老朋友聚在一起，", "地聊了整個晚上。", "天南地北", "Old friends got together and chatted about everything under the sun all night."],
+    ["老朋友多年不見，一見面就從工作聊到家庭、從電影聊到旅行，", "地聊了整個晚上。", "天南地北", "Old friends hadn't met for years — they chatted about everything under the sun, from work to family and movies to travel, all night."],
     ["即使分隔兩地，我們仍靠電話保持", "。", "聯繫", "Even though we live far apart, we still keep in touch by phone."],
     ["長期缺乏溝通，兩兄弟的感情漸漸", "。", "疏遠", "Lacking communication for so long, the two brothers have gradually grown apart."],
     ["處理好", "，工作起來自然事半功倍。", "人際關係", "Handle interpersonal relationships well and work becomes twice as effective."],
@@ -1095,7 +1150,7 @@ function renderFill(){
   });
   panel.querySelectorAll(".blank").forEach(bl=>bl.onclick = ()=>{
     const i = +bl.dataset.i;
-    if(bl.classList.contains("ok")||bl.classList.contains("bad")) return;
+    if(bl.classList.contains("ok")) return; // 答對的鎖定，答錯可修改
     if(fillState.filled[i]){ // return word to bank
       const old = fillState.filled[i]; delete fillState.filled[i];
       const c = panel.querySelector(`.chip-w[data-w="${old}"]`); if(c) c.classList.remove("used");
@@ -1114,7 +1169,7 @@ function renderFill(){
       done++;
       const good = fillState.filled[i] === FILL[i][2];
       bl.classList.toggle("ok", good); bl.classList.toggle("bad", !good);
-      if(good){ ok++; awardPoints(5, "quiz", "fill:"+curFillLesson+":"+i, bl, "答對了"); }
+      if(good){ ok++; awardPoints(1, "quiz", "fill:"+curFillLesson+":"+i, bl, "答對了"); }
     });
     const sc = document.getElementById("fillScore");
     if(done < FILL.length){ sc.textContent = zhL(`還有 ${FILL.length-done} 題未完成 · ${FILL.length-done} left`); sc.className="score bad"; return; }
@@ -1128,7 +1183,7 @@ renderFill();
 
 /* ---- 2. 成語選詞填空（10+ 個成語造句練習） ---- */
 const IDIOM_FILL = [
-  ["老朋友聚在一起，", "地聊了整個晚上。", "天南地北", "Old friends got together and chatted about everything under the sun all night."],
+  ["老朋友多年不見，一見面就從工作聊到家庭、從電影聊到旅行，", "地聊了整個晚上。", "天南地北", "Old friends hadn't met for years — they chatted about everything under the sun, from work to family and movies to travel, all night."],
   ["只要肯努力，", "，不必人人都去讀大學。", "行行出狀元", "As long as you work hard, there's a master in every trade — not everyone has to go to university."],
   ["只要堅持夢想，", "你一定會成功。", "有朝一日", "Keep chasing your dream and one day you will surely succeed."],
   ["這裏氣氛輕鬆，大家可以", "，不必顧慮。", "暢所欲言", "The atmosphere here is relaxed — everyone can speak freely without worry."],
@@ -1150,13 +1205,12 @@ let idiomFillState = { sel:null, filled:{} };
 function renderIdiomFill(){
   idiomFillState = { sel:null, filled:{} };
   // 詞語庫：12 個成語池（取全部 + 隨機干擾項，確保 6 個干擾成語）
-  const POOL = ["天南地北","行行出狀元","有朝一日","暢所欲言","深思熟慮","興致勃勃","一籌莫展","兩全其美","左右為難","舉棋不定","無所適從","先公而後私","有商有量","模棱兩可"];
-  const correctSet = new Set(IDIOM_FILL.map(f=>f[2]));
-  const distractors = POOL.filter(w=>!correctSet.has(w));
+  const DISTRACTORS = ["畫蛇添足","守株待兔","亡羊補牢","對牛彈琴","雪中送炭","井底之蛙"];
   const bank = [];
   IDIOM_FILL.forEach(f=>bank.push(f[2]));
-  // 加 4 個干擾
-  for(let i=0;i<4 && distractors.length;i++) bank.push(distractors.splice(Math.floor(Math.random()*distractors.length),1)[0]);
+  // 加 4 個干擾成語（從干擾池隨機抽，均不符合任何句子）
+  const pool = DISTRACTORS.slice();
+  for(let i=0;i<4 && pool.length;i++) bank.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0]);
   bank.sort(()=>Math.random()-.5);
   const panel = document.getElementById("panel-idiom");
   panel.innerHTML = `
@@ -1178,7 +1232,7 @@ function renderIdiomFill(){
   });
   panel.querySelectorAll(".blank").forEach(bl=>bl.onclick = ()=>{
     const i = +bl.dataset.i;
-    if(bl.classList.contains("ok")||bl.classList.contains("bad")) return;
+    if(bl.classList.contains("ok")) return; // 答對的鎖定，答錯可修改
     if(idiomFillState.filled[i]){
       const old = idiomFillState.filled[i]; delete idiomFillState.filled[i];
       const c = panel.querySelector(`.chip-w[data-w="${old}"]`); if(c) c.classList.remove("used");
@@ -1197,7 +1251,7 @@ function renderIdiomFill(){
       done++;
       const good = idiomFillState.filled[i] === IDIOM_FILL[i][2];
       bl.classList.toggle("ok", good); bl.classList.toggle("bad", !good);
-      if(good){ ok++; awardPoints(5, "quiz", "idiom:"+i, bl, "答對了"); }
+      if(good){ ok++; awardPoints(1, "quiz", "idiom:"+i, bl, "答對了"); }
     });
     const sc = document.getElementById("idiomScore");
     if(done < IDIOM_FILL.length){ sc.textContent = zhL(`還有 ${IDIOM_FILL.length-done} 題未完成 · ${IDIOM_FILL.length-done} left`); sc.className="score bad"; return; }
@@ -1236,7 +1290,7 @@ function renderChoice(panelId, data, prefix){
       item.querySelectorAll(".opt").forEach(b=>b.disabled = true);
       fb.textContent = zhL((good ? "✔ 答對了！Correct!" : "✘ 正確答案是 The answer is「" + q.a + "」") + (q.note ? "　💡 " + q.note : ""));
       fb.className = "fb show " + (good?"ok":"bad");
-      if(good) awardPoints(10, "quiz", prefix+":"+item.dataset.q, btn, "答對了");
+      if(good) awardPoints(1, "quiz", prefix+":"+item.dataset.q, btn, "答對了");
       const s = score();
       if(s){ const sc = document.getElementById(prefix+"Score"); sc.textContent = zhL(`得分 Score：${s[0]} / ${s[1]} ${s[0]===s[1]?"🎉 滿分！Full marks!":""}`); sc.className="score "+(s[0]===s[1]?"ok":"bad"); if(s[0]===s[1]){ confettiBurst(90); toast("🎉 全對！Perfect!"); } }
     });
